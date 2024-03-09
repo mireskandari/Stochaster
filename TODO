@@ -3,3 +3,5 @@
 3. implement ops.Softmax class in ops.py. DONE
 4. implement ops.LogSoftmax class in ops.py. DONE
 5. implement tensor.logsoftmax() using ops.LogSoftmax in ops.py. DONE
+6. implement tensor.rand(generator=None) @staticmethod in tensor class 
+7. implement tensor.uniform(a=0.0, b=1.0) @staticmethod in tensor class using tensor.rand

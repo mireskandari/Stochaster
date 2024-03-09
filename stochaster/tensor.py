@@ -58,15 +58,16 @@ class Tensor:
       return
     return
   
-  def dot(self, x: Tensor) -> Tensor:
-    return Multiply.apply(self, x)
+  def dot(self, x: Tensor, **kwargs) -> Tensor:
+    return Multiply.apply(self, x, **kwargs)
 
-  def relu(self) -> Tensor:
+  def relu(self, **kwargs) -> Tensor:
     return Relu.apply(self)
 
-  def logsoftmax(self) -> Tensor:
+  def logsoftmax(self, **kwargs) -> Tensor:
     return LogSoftmax.apply(self)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   # Randoms
 =======
@@ -99,6 +100,8 @@ class Tensor:
   @staticmethod
   def uniform(*shape, a=0.0, b=1.0, **kwargs):
     return Tensor.random(*shape, **kwargs) * (b - a) + a
+=======
+>>>>>>> 9950d71 (added **kwargs in tensor.py and removed uniform & rand)
   # Numpy Properties
   
   @property
