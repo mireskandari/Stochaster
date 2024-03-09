@@ -78,7 +78,18 @@ class Tensor:
       data = generator.rand(shape)
     return Tensor(data)
 
+<<<<<<< HEAD
 >>>>>>> f1eca78 (aider: Finish sixth entry in TODO file)
+=======
+  @staticmethod
+  def uniform(a=0.0, b=1.0, shape=None, generator=None) -> Tensor:
+    if generator is None:
+      data = _np.random.uniform(a, b, shape)
+    else:
+      data = generator.uniform(a, b, shape)
+    return Tensor(data)
+
+>>>>>>> 34ff954 (aider: finish seventh entry in TODO file)
 
   @staticmethod
   def random(*shape, **kwargs):
