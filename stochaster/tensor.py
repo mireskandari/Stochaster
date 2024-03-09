@@ -67,7 +67,18 @@ class Tensor:
   def logsoftmax(self) -> Tensor:
     return LogSoftmax.apply(self)
 
+<<<<<<< HEAD
   # Randoms
+=======
+  @staticmethod
+  def rand(*shape, generator=None) -> Tensor:
+    if generator is None:
+      data = _np.random.rand(*shape)
+    else:
+      data = generator.rand(*shape)
+    return Tensor(data)
+
+>>>>>>> f1eca78 (aider: Finish sixth entry in TODO file)
 
   @staticmethod
   def random(*shape, **kwargs):
