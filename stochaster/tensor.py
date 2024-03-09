@@ -71,11 +71,11 @@ class Tensor:
   # Randoms
 =======
   @staticmethod
-  def rand(*shape, generator=None) -> Tensor:
+  def rand(shape, generator=None) -> Tensor:
     if generator is None:
-      data = _np.random.rand(*shape)
+      data = _np.random.rand(shape)
     else:
-      data = generator.rand(*shape)
+      data = generator.rand(shape)
     return Tensor(data)
 
 >>>>>>> f1eca78 (aider: Finish sixth entry in TODO file)
