@@ -67,10 +67,7 @@ class Tensor:
   def logsoftmax(self, **kwargs) -> Tensor:
     return LogSoftmax.apply(self)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   # Randoms
-=======
   @staticmethod
   def rand(shape, generator=None) -> Tensor:
     if generator is None:
@@ -79,9 +76,7 @@ class Tensor:
       data = generator.rand(shape)
     return Tensor(data)
 
-<<<<<<< HEAD
->>>>>>> f1eca78 (aider: Finish sixth entry in TODO file)
-=======
+
   @staticmethod
   def uniform(a=0.0, b=1.0, shape=None, generator=None) -> Tensor:
     if generator is None:
@@ -89,8 +84,6 @@ class Tensor:
     else:
       data = generator.uniform(a, b, shape)
     return Tensor(data)
-
->>>>>>> 34ff954 (aider: finish seventh entry in TODO file)
 
   @staticmethod
   def random(*shape, **kwargs):
@@ -100,8 +93,7 @@ class Tensor:
   @staticmethod
   def uniform(*shape, a=0.0, b=1.0, **kwargs):
     return Tensor.random(*shape, **kwargs) * (b - a) + a
-=======
->>>>>>> 9950d71 (added **kwargs in tensor.py and removed uniform & rand)
+
   # Numpy Properties
   
   @property
